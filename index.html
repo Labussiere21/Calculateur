@@ -1,0 +1,121 @@
+<!DOCTYPE html><html lang="fr"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CalcMaster.fr — Calculateurs en ligne gratuits : finance, santé, sport, maths</title>
+<meta name="description" content="Plus de 71 calculateurs en ligne gratuits et précis : salaire brut/net, TVA, IMC, allure de course, VMA, prêt immobilier, conversions et plus.">
+<meta name="keywords" content="calculateur en ligne, calcul salaire brut net, IMC, prêt immobilier, TVA, allure course à pied, VMA, conversion unités, pourcentage, intérêts composés">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="CalcMaster.fr — 71+ Calculateurs gratuits">
+<meta property="og:description" content="Finance, santé, sport, maths, conversions, immobilier, sciences — tous vos calculs en un clic.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://calcmaster.fr/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,500;9..40,700&family=Fraunces:opsz,wght@9..144,400;9..144,700;9..144,900&display=swap" rel="stylesheet">
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0f0f13;--bg2:#18181f;--bg3:#1e1e28;--bg4:#282835;--text:#e8e6f0;--text2:#a09cb5;--text3:#6b6780;--accent1:#ff6b6b;--accent2:#ffa94d;--accent3:#ffd43b;--accent4:#69db7c;--accent5:#4dabf7;--accent6:#9775fa;--accent7:#f06595;--radius:14px;--radius-sm:8px;--shadow:0 4px 24px rgba(0,0,0,0.3);--font-body:'DM Sans',sans-serif;--font-display:'Fraunces',serif;}
+html{scroll-behavior:smooth}body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}a{color:inherit;text-decoration:none}
+.wrap{max-width:900px;margin:0 auto;padding:24px 20px}
+header{background:var(--bg2);border-bottom:1px solid var(--bg4);padding:16px 0;position:sticky;top:0;z-index:50;backdrop-filter:blur(12px)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.logo{font-family:var(--font-display);font-size:1.5rem;font-weight:900;background:linear-gradient(135deg,#ff6b6b,#ffa94d);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.logo small{font-size:.7rem;-webkit-text-fill-color:var(--text3);display:block;font-family:var(--font-body);font-weight:400}
+nav{display:flex;gap:6px;flex-wrap:wrap}
+nav a{padding:6px 14px;border-radius:20px;font-size:.75rem;font-weight:600;color:var(--text2);transition:all .15s;border:1px solid var(--bg4)}
+nav a:hover,nav a.active{background:var(--bg4);color:var(--text)}
+.breadcrumb{padding:16px 0 4px;font-size:.8rem;color:var(--text3)}
+.breadcrumb a{color:var(--accent5);text-decoration:underline}
+h1{font-family:var(--font-display);font-size:2.2rem;font-weight:900;line-height:1.2;margin:12px 0 8px}
+.desc{color:var(--text2);font-size:1rem;margin-bottom:28px}
+.calc-card{background:var(--bg3);border-radius:var(--radius);padding:28px;border:1px solid var(--bg4);margin-bottom:28px}
+.calc-card h2{font-size:1.05rem;font-weight:700;margin-bottom:18px;display:flex;align-items:center;gap:8px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-group{display:flex;flex-direction:column;gap:5px}
+.form-group.full{grid-column:1/-1}
+.form-group label{font-size:.78rem;color:var(--text2);font-weight:500}
+.form-group input,.form-group select{padding:11px 13px;border-radius:var(--radius-sm);border:1px solid var(--bg4);background:var(--bg);color:var(--text);font-size:.92rem;outline:none;transition:border .2s;font-family:var(--font-body)}
+.form-group input:focus,.form-group select:focus{border-color:var(--accent5)}
+.form-group input::placeholder{color:var(--text3)}
+.btn{padding:11px 26px;border:none;border-radius:var(--radius-sm);font-size:.88rem;font-weight:700;cursor:pointer;transition:all .15s;font-family:var(--font-body);display:inline-flex;align-items:center;gap:8px}
+.btn-primary{background:linear-gradient(135deg,#4dabf7,#9775fa);color:#fff}
+.btn-primary:hover{opacity:.9;transform:translateY(-1px)}
+.btn-secondary{background:var(--bg4);color:var(--text)}
+.btn-row{display:flex;gap:10px;margin-top:18px}
+.result-box{margin-top:22px;padding:22px;border-radius:var(--radius-sm);background:rgba(77,171,247,.06);border:1px solid rgba(77,171,247,.15);animation:fadeUp .3s ease both}
+.result-box h3{font-size:.82rem;color:var(--accent5);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+.result-main{font-family:var(--font-display);font-size:2rem;font-weight:900;margin-bottom:8px}
+.result-detail{font-size:.84rem;color:var(--text2);margin:3px 0}
+.result-table{width:100%;border-collapse:collapse;margin-top:14px}
+.result-table th,.result-table td{padding:9px 11px;text-align:left;font-size:.8rem;border-bottom:1px solid var(--bg4)}
+.result-table th{color:var(--text3);font-weight:600;text-transform:uppercase;letter-spacing:.5px;font-size:.68rem}
+.result-table td{color:var(--text2)}
+.seo-content{margin-top:36px;padding:28px;background:var(--bg3);border-radius:var(--radius);border:1px solid var(--bg4)}
+.seo-content h2{font-family:var(--font-display);font-size:1.3rem;font-weight:700;margin-bottom:14px}
+.seo-content h3{font-size:.95rem;font-weight:600;margin:18px 0 8px;color:var(--accent5)}
+.seo-content p{color:var(--text2);font-size:.86rem;margin-bottom:10px;line-height:1.8}
+.seo-content strong{color:var(--text)}
+.faq{margin-top:28px}.faq h2{font-family:var(--font-display);font-size:1.2rem;margin-bottom:14px}
+.faq-item{border:1px solid var(--bg4);border-radius:var(--radius-sm);margin-bottom:8px;overflow:hidden}
+.faq-q{padding:13px 16px;cursor:pointer;font-size:.86rem;font-weight:600;display:flex;justify-content:space-between;align-items:center;background:var(--bg3);transition:background .15s}
+.faq-q:hover{background:var(--bg4)}
+.faq-a{padding:0 16px;max-height:0;overflow:hidden;transition:all .3s;font-size:.82rem;color:var(--text2);line-height:1.7}
+.faq-a.open{padding:13px 16px;max-height:500px}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin:24px 0}
+.cat-card{background:var(--bg3);border-radius:var(--radius);padding:22px;cursor:pointer;transition:all .2s;border:1px solid transparent;position:relative;overflow:hidden;display:block}
+.cat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.cat-card:hover{border-color:var(--bg4);transform:translateY(-2px);box-shadow:var(--shadow)}
+.cat-card-icon{font-size:1.8rem;margin-bottom:10px}
+.cat-card h3{font-size:1rem;font-weight:700;margin-bottom:5px}
+.cat-card p{font-size:.78rem;color:var(--text3);line-height:1.5}
+.cat-card .count{display:inline-block;margin-top:8px;font-size:.68rem;background:var(--bg4);padding:3px 10px;border-radius:20px;color:var(--text2)}
+.calc-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;margin:20px 0}
+.calc-list-item{background:var(--bg3);border:1px solid var(--bg4);border-radius:var(--radius-sm);padding:14px 16px;display:flex;align-items:center;gap:12px;transition:all .15s}
+.calc-list-item:hover{border-color:var(--accent5);transform:translateY(-1px)}
+.calc-list-item .cli-icon{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
+.calc-list-item h4{font-size:.85rem;font-weight:600;margin-bottom:2px}
+.calc-list-item p{font-size:.7rem;color:var(--text3)}
+.hero{text-align:center;padding:44px 0 20px}
+.hero h1{font-size:2.6rem}
+.hero h1 .gr1{background:linear-gradient(135deg,#ff6b6b,#ffa94d);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero h1 .gr2{background:linear-gradient(135deg,#4dabf7,#9775fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{color:var(--text2);font-size:1rem;max-width:520px;margin:0 auto 24px}
+.stats-row{display:flex;justify-content:center;gap:40px;margin-top:28px;flex-wrap:wrap}
+.stat-num{font-family:var(--font-display);font-size:1.8rem;font-weight:900;background:linear-gradient(135deg,#4dabf7,#9775fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-label{font-size:.72rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px}
+.internal-links{margin:28px 0;padding:24px;background:var(--bg3);border-radius:var(--radius);border:1px solid var(--bg4)}
+.internal-links h3{font-size:.95rem;margin-bottom:12px;color:var(--accent5)}
+.internal-links a{display:inline-block;margin:3px 6px 3px 0;padding:5px 12px;background:var(--bg4);border-radius:20px;font-size:.76rem;color:var(--text2);transition:all .15s}
+.internal-links a:hover{background:var(--accent5);color:#fff}
+footer{margin-top:48px;padding:28px 0;border-top:1px solid var(--bg4);text-align:center;color:var(--text3);font-size:.76rem}
+footer a{color:var(--accent5);margin:0 6px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:700px){.form-grid{grid-template-columns:1fr}.hero h1{font-size:1.7rem}h1{font-size:1.6rem}nav{gap:4px}nav a{font-size:.68rem;padding:5px 10px}}</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"CalcMaster.fr","url":"https://calcmaster.fr","description":"Plus de 71 calculateurs en ligne gratuits en français","potentialAction":{"@type":"SearchAction","target":"https://calcmaster.fr/search?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
+</head><body>
+<header><div class="wrap"><a href="index.html" class="logo">CalcMaster<small>Calculateurs gratuits</small></a><nav><a href="finance.html">💰 Finance & Impôts</a><a href="sante.html">❤️ Santé & Bien-être</a><a href="sport.html">🏃 Sport & Running</a><a href="math.html">📐 Mathématiques</a><a href="conversions.html">🔄 Conversions</a><a href="immobilier.html">🏡 Immobilier</a><a href="science.html">🔬 Sciences & Physique</a><a href="quotidien.html">🏠 Vie Quotidienne</a><a href="pro.html">💼 Professionnel</a></nav></div></header>
+<main class="wrap">
+<section class="hero">
+<h1>Tous vos <span class="gr1">calculs</span> en un <span class="gr2">clic</span></h1>
+<p>Plus de 71 calculateurs gratuits, précis et instantanés pour la finance, la santé, le sport, les maths, les conversions et bien plus.</p>
+<div class="stats-row"><div><div class="stat-num">71+</div><div class="stat-label">Calculateurs</div></div><div><div class="stat-num">9</div><div class="stat-label">Catégories</div></div><div><div class="stat-num">100%</div><div class="stat-label">Gratuit</div></div></div>
+</section>
+<section class="cat-grid">
+<a class="cat-card" href="finance.html" style="--cg:linear-gradient(135deg,#ff6b6b,#ffa94d)"><div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(135deg,#ff6b6b,#ffa94d)"></div><div class="cat-card-icon">💰</div><h3>Finance & Impôts</h3><p>Salaire, impôts, TVA, prêts, épargne, retraite et investissements.</p><span class="count">12 outils</span></a>
+<a class="cat-card" href="sante.html" style="--cg:linear-gradient(135deg,#69db7c,#4dabf7)"><div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(135deg,#69db7c,#4dabf7)"></div><div class="cat-card-icon">❤️</div><h3>Santé & Bien-être</h3><p>IMC, calories, métabolisme, grossesse et nutrition.</p><span class="count">8 outils</span></a>
+<a class="cat-card" href="sport.html" style="--cg:linear-gradient(135deg,#ffa94d,#ffd43b)"><div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(135deg,#ffa94d,#ffd43b)"></div><div class="cat-card-icon">🏃</div><h3>Sport & Running</h3><p>Allure, temps au km, VMA, VO2max, vitesse, distances et performances.</p><span class="count">10 outils</span></a>
+<a class="cat-card" href="math.html" style="--cg:linear-gradient(135deg,#4dabf7,#9775fa)"><div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(135deg,#4dabf7,#9775fa)"></div><div class="cat-card-icon">📐</div><h3>Mathématiques</h3><p>Géométrie, algèbre, statistiques, probabilités et trigonométrie.</p><span class="count">10 outils</span></a>
+<a class="cat-card" href="conversions.html" style="--cg:linear-gradient(135deg,#ffa94d,#ffd43b)"><div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(135deg,#ffa94d,#ffd43b)"></div><div class="cat-card-icon">🔄</div><h3>Conversions</h3><p>Longueurs, poids, volumes, températures, vitesses et plus.</p><span class="count">8 outils</span></a>
+<a class="cat-card" href="immobilier.html" style="--cg:linear-gradient(135deg,#9775fa,#f06595)"><div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(135deg,#9775fa,#f06595)"></div><div class="cat-card-icon">🏡</div><h3>Immobilier</h3><p>Prêt, rentabilité, frais de notaire, taxe foncière.</p><span class="count">5 outils</span></a>
+<a class="cat-card" href="science.html" style="--cg:linear-gradient(135deg,#ffd43b,#ffa94d)"><div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(135deg,#ffd43b,#ffa94d)"></div><div class="cat-card-icon">🔬</div><h3>Sciences & Physique</h3><p>Électricité, mécanique, chimie, optique et constantes.</p><span class="count">6 outils</span></a>
+<a class="cat-card" href="quotidien.html" style="--cg:linear-gradient(135deg,#f06595,#ff6b6b)"><div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(135deg,#f06595,#ff6b6b)"></div><div class="cat-card-icon">🏠</div><h3>Vie Quotidienne</h3><p>Cuisine, carburant, dates, pourboire, consommation.</p><span class="count">8 outils</span></a>
+<a class="cat-card" href="pro.html" style="--cg:linear-gradient(135deg,#4dabf7,#69db7c)"><div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(135deg,#4dabf7,#69db7c)"></div><div class="cat-card-icon">💼</div><h3>Professionnel</h3><p>Auto-entrepreneur, marge, seuil de rentabilité, paie.</p><span class="count">4 outils</span></a>
+</section>
+<section class="seo-content">
+<h2>CalcMaster.fr — Votre boîte à outils de calcul en ligne</h2>
+<p>Bienvenue sur <strong>CalcMaster.fr</strong>, votre plateforme de référence pour les calculateurs en ligne gratuits en français. Que vous ayez besoin de convertir votre salaire brut en net, de calculer votre IMC, de connaître votre allure de course, de simuler un prêt immobilier ou de résoudre une équation, nos outils sont conçus pour vous fournir des résultats précis et instantanés.</p>
+<h3>Des calculateurs pour tous les besoins</h3>
+<p>Notre site couvre 9 grandes catégories : <strong>Finance & Impôts</strong>, <strong>Santé & Bien-être</strong>, <strong>Sport & Running</strong>, <strong>Mathématiques</strong>, <strong>Conversions</strong>, <strong>Immobilier</strong>, <strong>Sciences & Physique</strong>, <strong>Vie Quotidienne</strong>, <strong>Professionnel</strong>. Chaque calculateur est accompagné d'explications détaillées, de formules et d'une FAQ pour vous aider à comprendre les résultats.</p>
+<h3>100% gratuit, 100% privé</h3>
+<p>Tous nos calculateurs fonctionnent directement dans votre navigateur. <strong>Aucune donnée n'est envoyée à un serveur</strong>, aucune inscription n'est requise. Vos informations restent sur votre appareil.</p>
+</section>
+</main>
+<footer><div class="wrap"><p>© 2026 CalcMaster.fr — Tous les calculs sont effectués dans votre navigateur. Aucune donnée personnelle collectée.</p><p style="margin-top:8px"><a href="finance.html">Finance & Impôts</a> · <a href="sante.html">Santé & Bien-être</a> · <a href="sport.html">Sport & Running</a> · <a href="math.html">Mathématiques</a> · <a href="conversions.html">Conversions</a> · <a href="immobilier.html">Immobilier</a> · <a href="science.html">Sciences & Physique</a> · <a href="quotidien.html">Vie Quotidienne</a> · <a href="pro.html">Professionnel</a></p></div></footer>
+</body></html>
