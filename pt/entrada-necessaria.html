@@ -44,6 +44,33 @@ h1 em{font-style:normal;color:var(--em)}
 .fqa{max-height:0;overflow:hidden;transition:.3s;font-size:.82rem;color:var(--t2);line-height:1.75;padding:0 16px}.fqa.open{max-height:400px;padding:0 16px 14px}
 .il{margin:20px 0;display:flex;flex-wrap:wrap;gap:6px}.il a{padding:6px 14px;background:var(--ibg);border-radius:30px;font-size:.76rem;font-weight:600;color:var(--t2);transition:.15s;border:1px solid var(--bd)}.il a:hover{background:var(--nf);border-color:var(--nm);color:var(--nv)}
 footer{background:var(--nv);color:rgba(255,255,255,.55);padding:32px 24px;text-align:center;font-size:.76rem;margin-top:32px}footer a{color:rgba(255,255,255,.75);margin:0 5px}
+/* AD ZONES */
+.ad-zone{background:var(--card);border:1px dashed var(--bd);border-radius:var(--rs);padding:20px;margin:24px 0;text-align:center;min-height:90px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.ad-zone::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--nf),var(--ef));opacity:.5;z-index:0}
+.ad-zone-content{position:relative;z-index:1;width:100%}
+.ad-zone .ad-label{font-size:.62rem;color:var(--t4);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px;font-weight:600}
+.ad-zone .ad-placeholder{color:var(--t3);font-size:.78rem}
+.ad-banner{min-height:90px}
+.ad-sidebar{min-height:250px}
+.ad-native{border-style:solid;border-color:var(--bd);padding:24px}
+.ad-native .ad-native-tag{font-size:.6rem;color:var(--t4);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;font-weight:700}
+.ad-native .ad-native-title{font-family:var(--fd);font-size:1rem;font-weight:700;color:var(--nv);margin-bottom:6px}
+.ad-native .ad-native-desc{font-size:.82rem;color:var(--t2);margin-bottom:10px;line-height:1.6}
+.ad-native .ad-native-cta{display:inline-block;padding:8px 20px;background:var(--em);color:#fff;border-radius:var(--rx);font-size:.8rem;font-weight:700;transition:.15s}
+.ad-native .ad-native-cta:hover{background:var(--el)}
+.ad-affil{background:linear-gradient(135deg,rgba(26,39,68,.03),rgba(13,124,95,.02));border:1px solid var(--bd);border-radius:var(--rs);padding:22px;margin:24px 0}
+.ad-affil-header{font-size:.62rem;color:var(--t4);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;font-weight:600}
+.ad-affil-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.ad-affil-item{background:var(--card);border:1px solid var(--bd);border-radius:var(--rx);padding:16px;transition:.15s;display:block}
+.ad-affil-item:hover{box-shadow:var(--sh);border-color:var(--nm);transform:translateY(-1px)}
+.ad-affil-item .afi-name{font-weight:700;font-size:.86rem;color:var(--nv);margin-bottom:3px}
+.ad-affil-item .afi-desc{font-size:.74rem;color:var(--t3);line-height:1.5;margin-bottom:8px}
+.ad-affil-item .afi-cta{font-size:.72rem;font-weight:700;color:var(--em)}
+/* Layout with sidebar ad */
+.content-with-sidebar{display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start}
+.content-main{min-width:0}
+.content-sidebar{position:sticky;top:80px}
+@media(max-width:900px){.content-with-sidebar{grid-template-columns:1fr}.content-sidebar{position:static}}
 .fl{font-family:var(--fd);font-size:1.1rem;font-weight:900;color:#fff;margin-bottom:6px}
 .hero{padding:44px 0 28px;text-align:center}.hero h1{font-size:2.4rem}.hero p{color:var(--t2);font-size:1.02rem;max-width:560px;margin:0 auto 18px}
 .bg{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:20px}.badge{display:inline-flex;align-items:center;gap:5px;padding:5px 14px;border-radius:40px;background:var(--nf);color:var(--nv);font-size:.76rem;font-weight:600}.badge.g{background:var(--ef);color:var(--em)}
@@ -55,11 +82,80 @@ footer{background:var(--nv);color:rgba(255,255,255,.55);padding:32px 24px;text-a
 <header><div class="hi"><a href="index.html" class="logo"><div class="logo-i">IC</div> ImmoCalc</a><div class="lb"><a href="../apport-personnel.html">🇫🇷 Français</a><a href="../en/down-payment.html">🇬🇧 English</a><a href="../de/eigenkapital.html">🇩🇪 Deutsch</a><a href="../es/entrada-necesaria.html">🇪🇸 Español</a><a href="../pt/entrada-necessaria.html" class="ac">🇵🇹 Português</a><a href="../it/anticipo-necessario.html">🇮🇹 Italiano</a></div></div></header>
 <div class="w">
 <div class="bc"><a href="index.html">← Todos os simuladores</a> › <strong>Entrada</strong></div>
+
+<!-- AD ZONE 1: Banner top (728×90 leaderboard) -->
+<div class="ad-zone ad-banner" id="ad-top">
+<div class="ad-zone-content"><div class="ad-label">Publicité</div><div class="ad-placeholder"><!-- Google AdSense / Ad Manager: 728x90 leaderboard --><div style="width:728px;max-width:100%;height:90px;background:var(--ibg);border-radius:var(--rx);margin:0 auto"></div></div></div>
+</div>
+
+<div class="content-with-sidebar">
+<div class="content-main">
 <h1>Entrada Necessária</h1><p class="desc">Entrada recomendada.</p>
 <div class="card"><div class="fg"><div class="fi"><label>Preço (€)</label><input type="number" id="a" placeholder="250000" step="1"></div><div class="fi"><label>Tipo</label><select id="b"><option>Usado (>5a)</option><option>Novo (<5a)</option><option>Terreno</option></select></div><div class="fi"><label>País</label><select id="c"><option>França</option><option>Portugal</option><option>Espanha</option><option>Itália</option><option>Alemanha</option><option>Reino Unido</option></select></div></div><div class="br"><button class="btn bp" onclick="calc()">Calcular</button><button class="btn bs" onclick="document.querySelectorAll('.card input').forEach(function(x){x.value=''});document.getElementById('RZ').innerHTML=''">Limpar</button></div><div id="RZ"></div></div>
 
+<!-- AD ZONE 2: Native ad after calculator results -->
+<div class="ad-zone ad-native" id="ad-native">
+<div class="ad-zone-content">
+<div class="ad-native-tag">Partenaire</div>
+<div class="ad-native-title"><!-- Titre partenaire / affilié --></div>
+<div class="ad-native-desc"><!-- Description courte du partenaire --></div>
+<a href="#" class="ad-native-cta" rel="sponsored nofollow"><!-- CTA --></a>
+</div>
+</div>
+
+
+
+<!-- AD ZONE 3: Banner middle (responsive) -->
+<div class="ad-zone ad-banner" id="ad-mid">
+<div class="ad-zone-content"><div class="ad-label">Publicité</div><div class="ad-placeholder"><!-- Google AdSense: responsive --><div style="width:100%;height:90px;background:var(--ibg);border-radius:var(--rx)"></div></div></div>
+</div>
+
 
 <div class="il"><a href="credito-habitacao.html">Crédito Habitação</a><a href="custos-aquisicao.html">Custos Aquisição</a><a href="capacidade-credito.html">Capacidade Crédito</a><a href="rentabilidade-arrendamento.html">Rentabilidade</a><a href="mais-valias.html">Mais-Valias</a><a href="credito-internacional.html">Crédito Internacional</a><a href="plano-amortizacao.html">Amortização</a><a href="taxa-esforco.html">Taxa Esforço</a><a href="area-util.html">Área Útil</a><a href="comissao-agencia.html">Comissão Agência</a><a href="imi.html">IMI</a></div>
+</div>
+
+<!-- SIDEBAR -->
+<aside class="content-sidebar">
+<!-- AD ZONE 4: Sidebar sticky (300×250 / 300×600) -->
+<div class="ad-zone ad-sidebar" id="ad-sidebar" style="margin-top:0">
+<div class="ad-zone-content"><div class="ad-label">Publicité</div><div class="ad-placeholder"><!-- 300x250 MPU or 300x600 half-page --><div style="width:300px;max-width:100%;height:250px;background:var(--ibg);border-radius:var(--rx);margin:0 auto"></div></div></div>
+</div>
+
+<!-- AFFILIATE ZONE: Sidebar partner links -->
+<div class="ad-affil" id="affil-sidebar" style="margin-top:16px">
+<div class="ad-affil-header">Nos partenaires</div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<a href="#" class="ad-affil-item" rel="sponsored nofollow">
+<div class="afi-name"><!-- Courtier partenaire --></div>
+<div class="afi-desc"><!-- Comparez les taux --></div>
+<div class="afi-cta">Voir l'offre →</div>
+</a>
+<a href="#" class="ad-affil-item" rel="sponsored nofollow">
+<div class="afi-name"><!-- Assurance partenaire --></div>
+<div class="afi-desc"><!-- Assurance emprunteur --></div>
+<div class="afi-cta">Comparer →</div>
+</a>
+<a href="#" class="ad-affil-item" rel="sponsored nofollow">
+<div class="afi-name"><!-- Banque en ligne --></div>
+<div class="afi-desc"><!-- Offre spéciale --></div>
+<div class="afi-cta">Découvrir →</div>
+</a>
+</div>
+</div>
+</aside>
+</div>
+
+<!-- AD ZONE 5: Affiliate grid (full width, before footer) -->
+<div class="ad-affil" id="affil-bottom">
+<div class="ad-affil-header">Comparez les meilleures offres</div>
+<div class="ad-affil-grid">
+<a href="#" class="ad-affil-item" rel="sponsored nofollow"><div class="afi-name"><!-- Courtier 1 --></div><div class="afi-desc"><!-- Description --></div><div class="afi-cta">Comparer →</div></a>
+<a href="#" class="ad-affil-item" rel="sponsored nofollow"><div class="afi-name"><!-- Courtier 2 --></div><div class="afi-desc"><!-- Description --></div><div class="afi-cta">Simuler →</div></a>
+<a href="#" class="ad-affil-item" rel="sponsored nofollow"><div class="afi-name"><!-- Courtier 3 --></div><div class="afi-desc"><!-- Description --></div><div class="afi-cta">Voir l'offre →</div></a>
+<a href="#" class="ad-affil-item" rel="sponsored nofollow"><div class="afi-name"><!-- Assurance 1 --></div><div class="afi-desc"><!-- Description --></div><div class="afi-cta">Comparer →</div></a>
+</div>
+</div>
+
 </div>
 <footer><div class="fl">ImmoCalc</div><p>© 2026 ImmoCalc — Simuladores imobiliários gratuitos.</p></footer>
 <script>var LG='pt';var CD={France:{r:3.5,my:25,md:35,no:7.5,nn:2.5},Portugal:{r:3.8,my:40,md:40,no:8,nn:6},Espagne:{r:3.2,my:30,md:35,no:10,nn:10},"España":{r:3.2,my:30,md:35,no:10,nn:10},Spain:{r:3.2,my:30,md:35,no:10,nn:10},Spanien:{r:3.2,my:30,md:35,no:10,nn:10},Spagna:{r:3.2,my:30,md:35,no:10,nn:10},Italie:{r:3.3,my:30,md:35,no:9,nn:4},Italia:{r:3.3,my:30,md:35,no:9,nn:4},Italy:{r:3.3,my:30,md:35,no:9,nn:4},Italien:{r:3.3,my:30,md:35,no:9,nn:4},Allemagne:{r:3.0,my:30,md:40,no:7,nn:7},Deutschland:{r:3.0,my:30,md:40,no:7,nn:7},Germany:{r:3.0,my:30,md:40,no:7,nn:7},Germania:{r:3.0,my:30,md:40,no:7,nn:7},"Royaume-Uni":{r:4.2,my:25,md:45,no:3,nn:1.5},"United Kingdom":{r:4.2,my:25,md:45,no:3,nn:1.5},"Vereinigtes Königreich":{r:4.2,my:25,md:45,no:3,nn:1.5},"Reino Unido":{r:4.2,my:25,md:45,no:3,nn:1.5},"Regno Unito":{r:4.2,my:25,md:45,no:3,nn:1.5},França:{r:3.5,my:25,md:35,no:7.5,nn:2.5},Frankreich:{r:3.5,my:25,md:35,no:7.5,nn:2.5},Francia:{r:3.5,my:25,md:35,no:7.5,nn:2.5},Portogallo:{r:3.8,my:40,md:40,no:8,nn:6}};function pmt(r,n,p){if(r===0)return p/n;return p*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1)}
