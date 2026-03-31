@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://labussiere21.github.io/Calculateur/sitemap.xml
