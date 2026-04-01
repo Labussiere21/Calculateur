@@ -1,126 +1,50 @@
-<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>ImmoCalc — Simulateurs Immobiliers Internationaux</title>
-<meta name="description" content="12 simulateurs gratuits pour votre projet immobilier, quel que soit le pays."><meta name="robots" content="index,follow">
-<link rel="canonical" href="https://labussiere21.github.io/Calculateur/">
-<link rel="alternate" hreflang="fr" href="https://labussiere21.github.io/Calculateur/">
-<link rel="alternate" hreflang="en" href="https://labussiere21.github.io/Calculateur/en/">
-<link rel="alternate" hreflang="de" href="https://labussiere21.github.io/Calculateur/de/">
-<link rel="alternate" hreflang="es" href="https://labussiere21.github.io/Calculateur/es/">
-<link rel="alternate" hreflang="pt" href="https://labussiere21.github.io/Calculateur/pt/">
-<link rel="alternate" hreflang="it" href="https://labussiere21.github.io/Calculateur/it/">
-<link rel="alternate" hreflang="nl" href="https://labussiere21.github.io/Calculateur/nl/">
-<link rel="alternate" hreflang="fr-be" href="https://labussiere21.github.io/Calculateur/fr-be/">
-<link rel="alternate" hreflang="nl-be" href="https://labussiere21.github.io/Calculateur/nl-be/">
-<link rel="alternate" hreflang="fr-ch" href="https://labussiere21.github.io/Calculateur/fr-ch/">
-<link rel="alternate" hreflang="us" href="https://labussiere21.github.io/Calculateur/us/">
-<link rel="alternate" hreflang="lb" href="https://labussiere21.github.io/Calculateur/lb/">
-<link rel="alternate" hreflang="da" href="https://labussiere21.github.io/Calculateur/da/">
-<link rel="alternate" hreflang="ar" href="https://labussiere21.github.io/Calculateur/ar/">
-<link rel="alternate" hreflang="x-default" href="https://labussiere21.github.io/Calculateur/en/">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&display=swap" rel="stylesheet">
-<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#f8f9fa;--card:#fff;--ibg:#f1f3f5;--hov:#e9ecef;--nv:#1a2744;--nl:#2d4a7a;--nm:#4a6fa5;--nf:rgba(26,39,68,.06);--em:#0d7c5f;--el:#10a37f;--ef:rgba(13,124,95,.08);--tx:#1a1a2e;--t2:#4a4a6a;--t3:#8a8aaa;--t4:#b0b0c8;--bd:rgba(0,0,0,.06);--ss:0 1px 3px rgba(0,0,0,.04);--sh:0 4px 16px rgba(0,0,0,.06);--r:16px;--rs:10px;--rx:6px;--f:'DM Sans',system-ui,sans-serif;--fd:'Fraunces',Georgia,serif}
-html{scroll-behavior:smooth}body{font-family:var(--f);background:var(--bg);color:var(--tx);line-height:1.65;-webkit-font-smoothing:antialiased}a{color:var(--nl);text-decoration:none}
-header{background:var(--card);box-shadow:var(--ss);position:sticky;top:0;z-index:100}.hi{max-width:1140px;margin:0 auto;padding:13px 24px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
-.logo{font-family:var(--fd);font-size:1.45rem;font-weight:900;color:var(--nv);display:flex;align-items:center;gap:9px}.logo-i{width:34px;height:34px;background:linear-gradient(135deg,var(--nv),var(--nl));border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.85rem;font-weight:700;font-family:var(--fd)}
-.lb{display:flex;gap:4px;flex-wrap:wrap}.lb a{padding:5px 11px;border-radius:var(--rx);font-size:.73rem;font-weight:600;color:var(--t3);border:1px solid var(--bd);transition:.15s}.lb a:hover{color:var(--t2);background:var(--hov)}.lb a.ac{color:var(--nv);background:var(--nf);border-color:var(--nm)}
-.w{max-width:1140px;margin:0 auto;padding:0 24px}.bc{padding:14px 0 4px;font-size:.8rem;color:var(--t3)}.bc a{color:var(--nm)}.bc strong{color:var(--tx)}
-h1{font-family:var(--fd);font-size:2.2rem;font-weight:900;color:var(--nv);line-height:1.15;letter-spacing:-.02em;margin:10px 0 6px}
-h1 em{font-style:normal;color:var(--em)}
-.desc{color:var(--t2);font-size:.95rem;margin-bottom:24px}
-.card{background:var(--card);border-radius:var(--r);box-shadow:var(--sh);padding:32px;border:1px solid var(--bd);margin-bottom:28px}
-.fg{display:grid;grid-template-columns:1fr 1fr;gap:16px}.fi{display:flex;flex-direction:column;gap:4px}.fi.fu{grid-column:1/-1}
-.fi label{font-size:.76rem;color:var(--t2);font-weight:600}.fi input,.fi select{padding:11px 13px;border-radius:var(--rx);border:1px solid var(--bd);background:var(--ibg);color:var(--tx);font-size:.9rem;font-family:var(--f);outline:none;transition:.15s}
-.fi input:focus,.fi select:focus{border-color:var(--nm);box-shadow:0 0 0 3px rgba(26,39,68,.07);background:#fff}.fi input::placeholder{color:var(--t4)}
-.fi select{cursor:pointer;-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238a8aaa' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:30px}
-.br{display:flex;gap:9px;margin-top:20px}.btn{padding:11px 24px;border:none;border-radius:var(--rx);font-size:.86rem;font-weight:700;cursor:pointer;transition:.15s;font-family:var(--f);display:inline-flex;align-items:center;gap:7px}
-.bp{background:var(--nv);color:#fff}.bp:hover{background:var(--nl);box-shadow:var(--sh)}.bs{background:var(--ibg);color:var(--t2)}.bs:hover{background:var(--hov)}
-.rb{margin-top:24px;padding:26px;border-radius:var(--rs);background:linear-gradient(135deg,rgba(26,39,68,.025),rgba(13,124,95,.025));border:1px solid rgba(26,39,68,.07);animation:fu .3s ease both}
-.rb h3{font-size:.74rem;color:var(--nm);text-transform:uppercase;letter-spacing:1.4px;font-weight:700;margin-bottom:9px}.rb .rm{font-family:var(--fd);font-size:2.2rem;font-weight:900;color:var(--nv);margin-bottom:4px}.rb .rs{font-size:.8rem;color:var(--em);font-weight:600;margin-bottom:14px}
-.ri{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--bd);font-size:.82rem}.ri:last-child{border-bottom:none}.ri .rl{color:var(--t3)}.ri .rv{font-weight:600;text-align:right}
-.ri.hl{background:var(--ef);margin:3px -10px;padding:9px 10px;border-radius:var(--rx);border-bottom:none}.ri.hl .rv{color:var(--em)}
-.rt{width:100%;border-collapse:collapse;margin-top:14px;font-size:.78rem}.rt th{text-align:left;padding:9px 10px;color:var(--t3);font-weight:600;font-size:.68rem;text-transform:uppercase;border-bottom:2px solid var(--bd)}.rt td{padding:8px 10px;border-bottom:1px solid var(--bd);color:var(--t2)}.rt tr:hover td{background:var(--nf)}
-.cc{background:linear-gradient(135deg,var(--nv),var(--nl));color:#fff;border-radius:var(--r);padding:26px}.cc h3{font-family:var(--fd);font-size:1.05rem;margin-bottom:12px}
-.cc .fi label{color:rgba(255,255,255,.6)}.cc .fi input,.cc .fi select{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.14);color:#fff}.cc .fi input::placeholder{color:rgba(255,255,255,.3)}
-.cc .fi input:focus,.cc .fi select:focus{border-color:rgba(255,255,255,.35);box-shadow:0 0 0 3px rgba(255,255,255,.08);background:rgba(255,255,255,.17)}
-.cc .fi select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='rgba(255,255,255,0.5)' d='M2 4l4 4 4-4'/%3E%3C/svg%3E")}
-.cc .bp{background:#fff;color:var(--nv)}.cc .rb{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.1)}.cc .rb h3{color:rgba(255,255,255,.5)}.cc .rb .rm{color:#fff}.cc .ri .rl{color:rgba(255,255,255,.4)}.cc .ri .rv{color:#fff}.cc .ri{border-color:rgba(255,255,255,.07)}
-.seo{background:var(--card);border-radius:var(--r);box-shadow:var(--ss);padding:32px;border:1px solid var(--bd);margin-bottom:28px}.seo h2{font-family:var(--fd);font-size:1.2rem;font-weight:700;color:var(--nv);margin-bottom:12px}.seo h3{font-size:.9rem;font-weight:600;margin:16px 0 6px;color:var(--nl)}.seo p{color:var(--t2);font-size:.84rem;margin-bottom:9px;line-height:1.8}.seo strong{color:var(--tx)}
-.fqi{background:var(--card);border-radius:var(--rs);box-shadow:var(--ss);margin-bottom:7px;border:1px solid var(--bd);overflow:hidden}
-.fqq{padding:13px 16px;cursor:pointer;font-size:.84rem;font-weight:600;display:flex;justify-content:space-between;align-items:center;transition:.15s}.fqq:hover{background:var(--nf)}
-.fqa{max-height:0;overflow:hidden;transition:.3s;font-size:.82rem;color:var(--t2);line-height:1.75;padding:0 16px}.fqa.open{max-height:400px;padding:0 16px 14px}
-.il{margin:20px 0;display:flex;flex-wrap:wrap;gap:6px}.il a{padding:6px 14px;background:var(--ibg);border-radius:30px;font-size:.76rem;font-weight:600;color:var(--t2);transition:.15s;border:1px solid var(--bd)}.il a:hover{background:var(--nf);border-color:var(--nm);color:var(--nv)}
-footer{background:var(--nv);color:rgba(255,255,255,.55);padding:32px 24px;text-align:center;font-size:.76rem;margin-top:32px}footer a{color:rgba(255,255,255,.75);margin:0 5px}
-/* AD ZONES — all hidden by default. To activate: add class "active" or remove display:none */
-.ad-zone{display:none;background:var(--card);border:1px dashed var(--bd);border-radius:var(--rs);padding:20px;margin:24px 0;text-align:center;min-height:90px;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.ad-zone.active{display:flex}
-.ad-zone::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--nf),var(--ef));opacity:.5;z-index:0}
-.ad-zone-content{position:relative;z-index:1;width:100%}
-.ad-zone .ad-label{font-size:.62rem;color:var(--t4);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px;font-weight:600}
-.ad-zone .ad-placeholder{color:var(--t3);font-size:.78rem}
-.ad-banner{min-height:90px}
-.ad-sidebar{min-height:250px}
-.ad-native{border-style:solid;border-color:var(--bd);padding:24px}
-.ad-native .ad-native-tag{font-size:.6rem;color:var(--t4);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;font-weight:700}
-.ad-native .ad-native-title{font-family:var(--fd);font-size:1rem;font-weight:700;color:var(--nv);margin-bottom:6px}
-.ad-native .ad-native-desc{font-size:.82rem;color:var(--t2);margin-bottom:10px;line-height:1.6}
-.ad-native .ad-native-cta{display:inline-block;padding:8px 20px;background:var(--em);color:#fff;border-radius:var(--rx);font-size:.8rem;font-weight:700;transition:.15s}
-.ad-native .ad-native-cta:hover{background:var(--el)}
-.ad-affil{display:none;background:linear-gradient(135deg,rgba(26,39,68,.03),rgba(13,124,95,.02));border:1px solid var(--bd);border-radius:var(--rs);padding:22px;margin:24px 0}
-.ad-affil.active{display:block}
-.ad-affil-header{font-size:.62rem;color:var(--t4);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;font-weight:600}
-.ad-affil-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
-.ad-affil-item{background:var(--card);border:1px solid var(--bd);border-radius:var(--rx);padding:16px;transition:.15s;display:block}
-.ad-affil-item:hover{box-shadow:var(--sh);border-color:var(--nm);transform:translateY(-1px)}
-.ad-affil-item .afi-name{font-weight:700;font-size:.86rem;color:var(--nv);margin-bottom:3px}
-.ad-affil-item .afi-desc{font-size:.74rem;color:var(--t3);line-height:1.5;margin-bottom:8px}
-.ad-affil-item .afi-cta{font-size:.72rem;font-weight:700;color:var(--em)}
-/* Layout with sidebar ad — sidebar hidden by default */
-.content-with-sidebar{display:grid;grid-template-columns:1fr;gap:28px;align-items:start}
-.content-with-sidebar.ads-on{grid-template-columns:1fr 300px}
-.content-main{min-width:0}
-.content-sidebar{display:none;position:sticky;top:80px}
-.content-with-sidebar.ads-on .content-sidebar{display:block}
-@media(max-width:900px){.content-with-sidebar,.content-with-sidebar.ads-on{grid-template-columns:1fr}.content-sidebar{position:static}}
-.fl{font-family:var(--fd);font-size:1.1rem;font-weight:900;color:#fff;margin-bottom:6px}
-.hero{padding:44px 0 28px;text-align:center}.hero h1{font-size:2.4rem}.hero p{color:var(--t2);font-size:1.02rem;max-width:560px;margin:0 auto 18px}
-.bg{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:20px}.badge{display:inline-flex;align-items:center;gap:5px;padding:5px 14px;border-radius:40px;background:var(--nf);color:var(--nv);font-size:.76rem;font-weight:600}.badge.g{background:var(--ef);color:var(--em)}
-.cg{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin:20px 0}
-.ci{background:var(--card);border:1px solid var(--bd);border-radius:var(--rs);padding:18px;display:flex;align-items:center;gap:12px;transition:.15s;box-shadow:var(--ss)}
-.ci:hover{box-shadow:var(--sh);transform:translateY(-1px);border-color:var(--nm)}.ci .ico{font-size:1.4rem}.ci h3{font-size:.88rem;font-weight:600;margin-bottom:2px}.ci p{font-size:.72rem;color:var(--t3)}
-@keyframes fu{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:700px){.fg{grid-template-columns:1fr}.hero h1{font-size:1.7rem}h1{font-size:1.6rem}.card{padding:20px 16px}.hi{padding:10px 14px}}</style><script async src="https://www.googletagmanager.com/gtag/js?id=G-GR0YJEHWPB"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-GR0YJEHWPB');</script></head><body>
-<header><div class="hi"><a href="index.html" class="logo"><div class="logo-i">IC</div> ImmoCalc</a><div class="lb"><a href="index.html" class="ac">🇫🇷 Français</a><a href="en/index.html">🇬🇧 English</a><a href="de/index.html">🇩🇪 Deutsch</a><a href="es/index.html">🇪🇸 Español</a><a href="pt/index.html">🇵🇹 Português</a><a href="it/index.html">🇮🇹 Italiano</a><a href="nl/index.html">🇳🇱 Nederlands</a><a href="fr-be/index.html">🇧🇪 Belgique FR</a><a href="nl-be/index.html">🇧🇪 België NL</a><a href="fr-ch/index.html">🇨🇭 Suisse</a><a href="us/index.html">🇺🇸 USA</a><a href="lb/index.html">🇱🇺 Luxembourg</a><a href="da/index.html">🇩🇰 Danmark</a><a href="ar/index.html">🇦🇪 UAE / Dubai</a></div></div></header>
-<div class="w"><section class="hero"><h1>Simulateurs <em>Immobiliers</em> Internationaux</h1><p>12 simulateurs gratuits pour votre projet immobilier, quel que soit le pays.</p>
-<div class="bg"><span class="badge">🏠 12 simulateurs</span><span class="badge g">🌍 6 langues</span><span class="badge">🔒 100% privé</span></div></section>
-
-<!-- AD ZONE: Banner top index -->
-<div class="ad-zone ad-banner" id="ad-top"><div class="ad-zone-content"><div class="ad-label">Publicité</div><div class="ad-placeholder"><!-- AdSense 728x90 --><div style="width:728px;max-width:100%;height:90px;background:var(--ibg);border-radius:var(--rx);margin:0 auto"></div></div></div></div>
-
-<div class="cg"><a class="ci" href="pret-immobilier.html"><div class="ico">🏠</div><div><h3>Simulateur de Prêt Immobilier</h3><p>Calculez vos mensualités, le coût total du crédit et le taux effectif global.</p></div></a>
-<a class="ci" href="frais-de-notaire.html"><div class="ico">🏠</div><div><h3>Frais de Notaire</h3><p>Estimation des frais d'acquisition selon le pays, le type de bien et le prix.</p></div></a>
-<a class="ci" href="capacite-emprunt.html"><div class="ico">🏠</div><div><h3>Capacité d'Emprunt</h3><p>Combien pouvez-vous emprunter avec la règle des 35% ?</p></div></a>
-<a class="ci" href="rentabilite-locative.html"><div class="ico">🏠</div><div><h3>Rentabilité Locative</h3><p>Rendement brut, net et cash-flow mensuel de votre investissement.</p></div></a>
-<a class="ci" href="plus-value-immobiliere.html"><div class="ico">🏠</div><div><h3>Plus-Value Immobilière</h3><p>Estimez l'impôt sur la plus-value lors de la revente (barème français).</p></div></a>
-<a class="ci" href="pret-international.html"><div class="ico">🏠</div><div><h3>Prêt International</h3><p>Simulez un achat à l'étranger et comparez les conditions entre pays.</p></div></a>
-<a class="ci" href="tableau-amortissement.html"><div class="ico">🏠</div><div><h3>Tableau d'Amortissement</h3><p>Détail année par année du remboursement de votre prêt.</p></div></a>
-<a class="ci" href="apport-personnel.html"><div class="ico">🏠</div><div><h3>Apport Personnel</h3><p>L'apport minimum recommandé selon votre projet.</p></div></a>
-<a class="ci" href="taux-endettement.html"><div class="ico">🏠</div><div><h3>Taux d'Endettement</h3><p>Vérifiez le respect du seuil de 35%.</p></div></a>
-<a class="ci" href="surface-carrez.html"><div class="ico">🏠</div><div><h3>Surface Carrez</h3><p>Surface loi Carrez pièce par pièce.</p></div></a>
-<a class="ci" href="frais-agence.html"><div class="ico">🏠</div><div><h3>Frais d'Agence</h3><p>Estimez les honoraires de l'agence immobilière.</p></div></a>
-<a class="ci" href="taxe-fonciere.html"><div class="ico">🏠</div><div><h3>Taxe Foncière</h3><p>Estimation de la taxe foncière annuelle.</p></div></a></div>
-
-<!-- AFFILIATE ZONE: Partners grid -->
-<div class="ad-affil" id="affil-home">
-<div class="ad-affil-header">Nos partenaires</div>
-<div class="ad-affil-grid">
-<a href="#" class="ad-affil-item" rel="sponsored nofollow"><div class="afi-name"><!-- Courtier 1 --></div><div class="afi-desc"><!-- Description --></div><div class="afi-cta">Comparer →</div></a>
-<a href="#" class="ad-affil-item" rel="sponsored nofollow"><div class="afi-name"><!-- Courtier 2 --></div><div class="afi-desc"><!-- Description --></div><div class="afi-cta">Simuler →</div></a>
-<a href="#" class="ad-affil-item" rel="sponsored nofollow"><div class="afi-name"><!-- Assurance --></div><div class="afi-desc"><!-- Description --></div><div class="afi-cta">Voir l'offre →</div></a>
-</div>
-</div>
-
-</div>
-<footer><div class="fl">ImmoCalc</div><p>© 2026 ImmoCalc — Simulateurs immobiliers gratuits. Calculs effectués dans votre navigateur.</p></footer>
-</body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Property Calc | Coming Soon</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            max-width: 500px;
+        }
+        h1 { color: #2c3e50; margin-bottom: 0.5rem; }
+        p { color: #7f8c8d; font-size: 1.1rem; line-height: 1.6; }
+        .logo { font-size: 3rem; margin-bottom: 1rem; }
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 2s linear infinite;
+            margin: 2rem auto;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🏠📊</div>
+        <h1>Smart Property Calc</h1>
+        <p>We are currently fine-tuning our financial tools to provide you with the most accurate property insights.</p>
+        <div class="loader"></div>
+        <p><strong>Launch scheduled for tomorrow!</strong></p>
+    </div>
+</body>
+</html>
