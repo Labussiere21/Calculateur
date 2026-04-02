@@ -62,7 +62,49 @@ footer{background:var(--nv);color:rgba(255,255,255,.55);padding:28px 24px;text-a
 .cg{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;margin:16px 0}
 .ci{background:var(--card);border:1px solid var(--bd);border-radius:var(--rs);padding:16px;display:flex;align-items:center;gap:10px;transition:.15s;box-shadow:var(--ss)}.ci:hover{box-shadow:var(--sh);transform:translateY(-1px);border-color:var(--nm)}.ci h3{font-size:.84rem;font-weight:600;margin-bottom:1px}.ci p{font-size:.68rem;color:var(--t3)}
 @keyframes fu{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:700px){.fg{grid-template-columns:1fr}.hero h1{font-size:1.6rem}h1{font-size:1.5rem}.card{padding:18px 14px}.hi{padding:10px 12px}.content-with-sidebar,.content-with-sidebar.ads-on{grid-template-columns:1fr}.content-sidebar{position:static}}</style><script async src="https://www.googletagmanager.com/gtag/js?id=G-GR0YJEHWPB"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-GR0YJEHWPB");</script></head><body>
+@media(max-width:700px){.fg{grid-template-columns:1fr}.hero h1{font-size:1.6rem}h1{font-size:1.5rem}.card{padding:18px 14px}.hi{padding:10px 12px}.content-with-sidebar,.content-with-sidebar.ads-on{grid-template-columns:1fr}.content-sidebar{position:static}}
+/* Cookie Banner */
+#ck-banner{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:var(--card);border-top:1px solid var(--bd);box-shadow:0 -4px 20px rgba(0,0,0,.08);padding:0;animation:ckSlide .3s ease}
+@keyframes ckSlide{from{transform:translateY(100%)}to{transform:translateY(0)}}
+.ck-inner{max-width:1140px;margin:0 auto;padding:18px 24px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.ck-text{flex:1;min-width:280px}.ck-text strong{font-size:.88rem;color:var(--nv);display:block;margin-bottom:4px}.ck-text p{font-size:.78rem;color:var(--t2);line-height:1.6;margin:0}
+.ck-btns{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.ck-btn{padding:9px 20px;border:none;border-radius:var(--rx);font-size:.8rem;font-weight:700;cursor:pointer;font-family:var(--f);transition:.15s}
+.ck-accept{background:var(--em);color:#fff}.ck-accept:hover{background:var(--el)}
+.ck-reject{background:var(--ibg);color:var(--t2)}.ck-reject:hover{background:var(--hov)}
+.ck-link{font-size:.72rem;color:var(--nm);text-decoration:underline}
+@media(max-width:600px){.ck-inner{flex-direction:column;text-align:center}.ck-btns{justify-content:center}}</style><!-- Google Consent Mode v2 — default denied until user accepts -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',wait_for_update:500});
+gtag('js',new Date());gtag('config','G-GR0YJEHWPB');
+</script>
+<script>var CKT={"title":"Cookies & protection des données","text":"Ce site utilise Google Analytics. Aucune donnée personnelle n'est traitée.","accept":"Accepter","reject":"Refuser","policy":"Protection des données","policyLink":"privacy.html"};</script>
+<script>
+(function(){
+var CK='immo_consent';
+function getC(){try{return JSON.parse(localStorage.getItem(CK))}catch(e){return null}}
+function setC(v){localStorage.setItem(CK,JSON.stringify({v:v,t:Date.now()}))}
+function applyConsent(v){
+  if(v==='all'){
+    gtag('consent','update',{analytics_storage:'granted',ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted'});
+    if(!document.querySelector('script[src*="googletagmanager"]')){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-GR0YJEHWPB';document.head.appendChild(s);}
+  }
+}
+function showBanner(){
+  if(document.getElementById('ck-banner'))return;
+  var d=document.createElement('div');d.id='ck-banner';
+  d.innerHTML='<div class="ck-inner"><div class="ck-text"><strong>🍪 '+CKT.title+'</strong><p>'+CKT.text+'</p></div><div class="ck-btns"><button class="ck-btn ck-accept" onclick="ckAccept()">'+CKT.accept+'</button><button class="ck-btn ck-reject" onclick="ckReject()">'+CKT.reject+'</button><a href="'+CKT.policyLink+'" class="ck-link">'+CKT.policy+'</a></div></div>';
+  document.body.appendChild(d);
+}
+window.ckAccept=function(){setC('all');applyConsent('all');var b=document.getElementById('ck-banner');if(b)b.remove();};
+window.ckReject=function(){setC('none');var b=document.getElementById('ck-banner');if(b)b.remove();};
+window.ckReset=function(){localStorage.removeItem(CK);location.reload();};
+var existing=getC();
+if(existing){applyConsent(existing.v);}
+else{document.addEventListener('DOMContentLoaded',showBanner);}
+})();
+</script></head><body>
 <header><div class="hi"><a href="index.html" class="logo"><div class="logo-i">IC</div> ImmoCalc</a><div class="lb"><a href="../index.html">🇫🇷</a><a href="../en/index.html">🇬🇧</a><a href="../de/index.html">🇩🇪</a><a href="../es/index.html">🇪🇸</a><a href="../pt/index.html">🇵🇹</a><a href="../it/index.html">🇮🇹</a><a href="../nl/index.html">🇳🇱</a><a href="../fr-be/index.html">🇧🇪</a><a href="../nl-be/index.html">🇧🇪</a><a href="../fr-ch/index.html" class="ac">🇨🇭</a><a href="../us/index.html">🇺🇸</a><a href="../lb/index.html">🇱🇺</a><a href="../da/index.html">🇩🇰</a><a href="../uae/index.html">🇦🇪</a></div></div></header>
 <div class="w"><section class="hero"><h1>Simulateurs <em>Immobiliers</em> — Suisse</h1><p>Hypothèque SARON, droits de mutation, taux de charge, valeur locative.</p>
 <div class="bg"><span class="badge">🏠 8 simulateurs</span><span class="badge g">🇨🇭 Suisse</span><span class="badge">🔒 Privé</span></div></section>
@@ -79,4 +121,4 @@ footer{background:var(--nv);color:rgba(255,255,255,.55);padding:28px 24px;text-a
 <a href="#" class="ad-affil-item" rel="sponsored nofollow"><div class="afi-name"><!-- Partner 1 --></div><div class="afi-desc"><!-- Desc --></div><div class="afi-cta">→</div></a>
 <a href="#" class="ad-affil-item" rel="sponsored nofollow"><div class="afi-name"><!-- Partner 2 --></div><div class="afi-desc"><!-- Desc --></div><div class="afi-cta">→</div></a>
 </div></div></div>
-<footer><div class="fl">ImmoCalc</div><p>© 2026 ImmoCalc — Simulateurs immobiliers suisses.</p></footer></body></html>
+<footer><div class="fl">ImmoCalc</div><p>© 2026 ImmoCalc — Simulateurs immobiliers suisses.</p><p style="margin-top:6px"><a href="privacy.html">Protection des données</a> · <a href="legal.html">Mentions légales</a> · <a href="javascript:ckReset()">Cookies</a></p></footer></body></html>

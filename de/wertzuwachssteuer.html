@@ -60,7 +60,37 @@ footer{background:var(--nv);color:rgba(255,255,255,.55);padding:28px 24px;text-a
 .cg{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;margin:16px 0}
 .ci{background:var(--card);border:1px solid var(--bd);border-radius:var(--rs);padding:16px;display:flex;align-items:center;gap:10px;transition:.15s;box-shadow:var(--ss)}.ci:hover{box-shadow:var(--sh);transform:translateY(-1px);border-color:var(--nm)}.ci h3{font-size:.84rem;font-weight:600;margin-bottom:1px}.ci p{font-size:.68rem;color:var(--t3)}
 @keyframes fu{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:700px){.fg{grid-template-columns:1fr}.hero h1{font-size:1.6rem}h1{font-size:1.5rem}.card{padding:18px 14px}.hi{padding:10px 12px}.content-with-sidebar,.content-with-sidebar.ads-on{grid-template-columns:1fr}.content-sidebar{position:static}}</style><script async src="https://www.googletagmanager.com/gtag/js?id=G-GR0YJEHWPB"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-GR0YJEHWPB");</script></head><body>
+@media(max-width:700px){.fg{grid-template-columns:1fr}.hero h1{font-size:1.6rem}h1{font-size:1.5rem}.card{padding:18px 14px}.hi{padding:10px 12px}.content-with-sidebar,.content-with-sidebar.ads-on{grid-template-columns:1fr}.content-sidebar{position:static}}</style><!-- Google Consent Mode v2 — default denied until user accepts -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',wait_for_update:500});
+gtag('js',new Date());gtag('config','G-GR0YJEHWPB');
+</script>
+<script>
+(function(){
+var CK='immo_consent';
+function getC(){try{return JSON.parse(localStorage.getItem(CK))}catch(e){return null}}
+function setC(v){localStorage.setItem(CK,JSON.stringify({v:v,t:Date.now()}))}
+function applyConsent(v){
+  if(v==='all'){
+    gtag('consent','update',{analytics_storage:'granted',ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted'});
+    if(!document.querySelector('script[src*="googletagmanager"]')){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-GR0YJEHWPB';document.head.appendChild(s);}
+  }
+}
+function showBanner(){
+  if(document.getElementById('ck-banner'))return;
+  var d=document.createElement('div');d.id='ck-banner';
+  d.innerHTML='<div class="ck-inner"><div class="ck-text"><strong>🍪 '+CKT.title+'</strong><p>'+CKT.text+'</p></div><div class="ck-btns"><button class="ck-btn ck-accept" onclick="ckAccept()">'+CKT.accept+'</button><button class="ck-btn ck-reject" onclick="ckReject()">'+CKT.reject+'</button><a href="'+CKT.policyLink+'" class="ck-link">'+CKT.policy+'</a></div></div>';
+  document.body.appendChild(d);
+}
+window.ckAccept=function(){setC('all');applyConsent('all');var b=document.getElementById('ck-banner');if(b)b.remove();};
+window.ckReject=function(){setC('none');var b=document.getElementById('ck-banner');if(b)b.remove();};
+window.ckReset=function(){localStorage.removeItem(CK);location.reload();};
+var existing=getC();
+if(existing){applyConsent(existing.v);}
+else{document.addEventListener('DOMContentLoaded',showBanner);}
+})();
+</script></head><body>
 <header><div class="hi"><a href="index.html" class="logo"><div class="logo-i">IC</div> ImmoCalc</a><div class="lb"><a href="../plus-value-immobiliere.html">🇫🇷</a><a href="../en/capital-gains-tax.html">🇬🇧</a><a href="../de/wertzuwachssteuer.html" class="ac">🇩🇪</a><a href="../es/plusvalia-inmobiliaria.html">🇪🇸</a><a href="../pt/mais-valias.html">🇵🇹</a><a href="../it/plusvalenza-immobiliare.html">🇮🇹</a><a href="../nl/meerwaarde-belasting.html">🇳🇱</a><a href="../fr-be/plus-value-belgique.html">🇧🇪</a><a href="../nl-be/meerwaarde-belgie.html">🇧🇪</a><a href="../fr-ch/gain-immobilier-suisse.html">🇨🇭</a><a href="../us/capital-gains-tax-usa.html">🇺🇸</a><a href="../lb/plus-value-luxembourg.html">🇱🇺</a><a href="../da/plusvalue.html">🇩🇰</a><a href="../uae/plusvalue.html">🇦🇪</a></div></div></header>
 <div class="w">
 <div class="bc"><a href="index.html">← Alle Rechner</a> › <strong>Capital Gains Tax</strong></div>
@@ -86,7 +116,7 @@ footer{background:var(--nv);color:rgba(255,255,255,.55);padding:28px 24px;text-a
 <a href="#" class="ad-affil-item" rel="sponsored nofollow"><div class="afi-name"><!-- --></div><div class="afi-cta">→</div></a>
 </div></div>
 </div>
-<footer><div class="fl">ImmoCalc</div><p>© 2026 ImmoCalc — Kostenlose Immobilienrechner.</p></footer>
+<footer><div class="fl">ImmoCalc</div><p>© 2026 ImmoCalc — Kostenlose Immobilienrechner.</p><p style="margin-top:6px"><a href="privacy.html">Datenschutz</a> · <a href="legal.html">Impressum</a> · <a href="javascript:ckReset()">Cookie-Einstellungen</a></p></footer>
 <script>var LG='de';var CD={France:{r:3.5,my:25,md:35,no:7.5,nn:2.5},Portugal:{r:3.8,my:40,md:40,no:8,nn:6},Espagne:{r:3.2,my:30,md:35,no:10,nn:10},"España":{r:3.2,my:30,md:35,no:10,nn:10},Spain:{r:3.2,my:30,md:35,no:10,nn:10},Spanien:{r:3.2,my:30,md:35,no:10,nn:10},Spagna:{r:3.2,my:30,md:35,no:10,nn:10},Italie:{r:3.3,my:30,md:35,no:9,nn:4},Italia:{r:3.3,my:30,md:35,no:9,nn:4},Italy:{r:3.3,my:30,md:35,no:9,nn:4},Italien:{r:3.3,my:30,md:35,no:9,nn:4},Allemagne:{r:3.0,my:30,md:40,no:10,nn:10},Deutschland:{r:3.0,my:30,md:40,no:10,nn:10},Germany:{r:3.0,my:30,md:40,no:10,nn:10},Germania:{r:3.0,my:30,md:40,no:10,nn:10},"Royaume-Uni":{r:4.2,my:25,md:45,no:3,nn:1.5},"United Kingdom":{r:4.2,my:25,md:45,no:3,nn:1.5},Belgique:{r:3.4,my:25,md:33,no:11,nn:11},"België":{r:3.4,my:25,md:33,no:11,nn:11},Belgium:{r:3.4,my:25,md:33,no:11,nn:11},Belgien:{r:3.4,my:25,md:33,no:11,nn:11},"Pays-Bas":{r:3.6,my:30,md:35,no:6,nn:2},Nederland:{r:3.6,my:30,md:35,no:6,nn:2},Netherlands:{r:3.6,my:30,md:35,no:6,nn:2},Holland:{r:3.6,my:30,md:35,no:6,nn:2},Suisse:{r:2.5,my:25,md:33,no:3,nn:3},Switzerland:{r:2.5,my:25,md:33,no:3,nn:3},Schweiz:{r:2.5,my:25,md:33,no:3,nn:3},"États-Unis":{r:6.8,my:30,md:43,no:3.5,nn:3.5},USA:{r:6.8,my:30,md:43,no:3.5,nn:3.5},"United States":{r:6.8,my:30,md:43,no:3.5,nn:3.5},Luxembourg:{r:3.2,my:30,md:40,no:7,nn:3},Danemark:{r:3.5,my:30,md:40,no:1,nn:1},Denmark:{r:3.5,my:30,md:40,no:1,nn:1},Danmark:{r:3.5,my:30,md:40,no:1,nn:1},UAE:{r:4.5,my:25,md:50,no:4,nn:4},Dubai:{r:4.5,my:25,md:50,no:4,nn:4},Frankrig:{r:3.5,my:25,md:35,no:7.5,nn:2.5},Spanien:{r:3.2,my:30,md:35,no:10,nn:10},Italien:{r:3.3,my:30,md:35,no:9,nn:4},Tyskland:{r:3.0,my:30,md:40,no:10,nn:10},Storbritannien:{r:4.2,my:25,md:45,no:3,nn:1.5},"Forenede Arabiske Emirater":{r:4.5,my:25,md:50,no:4,nn:4},França:{r:3.5,my:25,md:35,no:7.5,nn:2.5},Frankreich:{r:3.5,my:25,md:35,no:7.5,nn:2.5},Francia:{r:3.5,my:25,md:35,no:7.5,nn:2.5},Portogallo:{r:3.8,my:40,md:40,no:8,nn:6},"Émirats arabes unis":{r:4.5,my:25,md:50,no:4,nn:4},"Vereinigtes Königreich":{r:4.2,my:25,md:45,no:3,nn:1.5},"Reino Unido":{r:4.2,my:25,md:45,no:3,nn:1.5},"Regno Unito":{r:4.2,my:25,md:45,no:3,nn:1.5},Niederlande:{r:3.6,my:30,md:35,no:6,nn:2},"Vereinigte Staaten":{r:6.8,my:30,md:43,no:3.5,nn:3.5},"Estados Unidos":{r:6.8,my:30,md:43,no:3.5,nn:3.5},"Stati Uniti":{r:6.8,my:30,md:43,no:3.5,nn:3.5},Luxemburg:{r:3.2,my:30,md:40,no:7,nn:3},Lussemburgo:{r:3.2,my:30,md:40,no:7,nn:3},Dänemark:{r:3.5,my:30,md:40,no:1,nn:1},Dinamarca:{r:3.5,my:30,md:40,no:1,nn:1}};function pmt(r,n,p){if(r===0)return p/n;return p*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1)}
 function fmt(n){return new Intl.NumberFormat(LG,{minimumFractionDigits:2,maximumFractionDigits:2}).format(n)}
 function fI(n){return new Intl.NumberFormat(LG,{minimumFractionDigits:0,maximumFractionDigits:0}).format(n)}
