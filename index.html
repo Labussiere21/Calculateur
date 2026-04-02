@@ -1,124 +1,50 @@
-<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>ImmoCalc — Simulateurs Immobiliers Internationaux</title>
-<meta name="description" content="Prêt, frais, rentabilité, fiscalité — adaptés à chaque pays. Résultats instantanés."><meta name="robots" content="index,follow">
-<link rel="canonical" href="https://labussiere21.github.io/Calculateur/">
-<link rel="alternate" hreflang="fr" href="https://labussiere21.github.io/Calculateur/">
-<link rel="alternate" hreflang="en" href="https://labussiere21.github.io/Calculateur/en/">
-<link rel="alternate" hreflang="de" href="https://labussiere21.github.io/Calculateur/de/">
-<link rel="alternate" hreflang="es" href="https://labussiere21.github.io/Calculateur/es/">
-<link rel="alternate" hreflang="pt" href="https://labussiere21.github.io/Calculateur/pt/">
-<link rel="alternate" hreflang="it" href="https://labussiere21.github.io/Calculateur/it/">
-<link rel="alternate" hreflang="nl" href="https://labussiere21.github.io/Calculateur/nl/">
-<link rel="alternate" hreflang="fr-BE" href="https://labussiere21.github.io/Calculateur/fr-be/">
-<link rel="alternate" hreflang="nl-BE" href="https://labussiere21.github.io/Calculateur/nl-be/">
-<link rel="alternate" hreflang="fr-CH" href="https://labussiere21.github.io/Calculateur/fr-ch/">
-<link rel="alternate" hreflang="en-US" href="https://labussiere21.github.io/Calculateur/us/">
-<link rel="alternate" hreflang="fr-LU" href="https://labussiere21.github.io/Calculateur/lb/">
-<link rel="alternate" hreflang="da" href="https://labussiere21.github.io/Calculateur/da/">
-<link rel="alternate" hreflang="en-AE" href="https://labussiere21.github.io/Calculateur/uae/">
-<link rel="alternate" hreflang="x-default" href="https://labussiere21.github.io/Calculateur/en/">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&display=swap" rel="stylesheet"><style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#f8f9fa;--card:#fff;--ibg:#f1f3f5;--hov:#e9ecef;--nv:#1a2744;--nl:#2d4a7a;--nm:#4a6fa5;--nf:rgba(26,39,68,.06);--em:#0d7c5f;--el:#10a37f;--ef:rgba(13,124,95,.08);--tx:#1a1a2e;--t2:#4a4a6a;--t3:#8a8aaa;--t4:#b0b0c8;--bd:rgba(0,0,0,.06);--ss:0 1px 3px rgba(0,0,0,.04);--sh:0 4px 16px rgba(0,0,0,.06);--r:16px;--rs:10px;--rx:6px;--f:'DM Sans',system-ui,sans-serif;--fd:'Fraunces',Georgia,serif}
-html{scroll-behavior:smooth}body{font-family:var(--f);background:var(--bg);color:var(--tx);line-height:1.65;-webkit-font-smoothing:antialiased}a{color:var(--nl);text-decoration:none}
-header{background:var(--card);box-shadow:var(--ss);position:sticky;top:0;z-index:100}.hi{max-width:1140px;margin:0 auto;padding:13px 24px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
-.logo{font-family:var(--fd);font-size:1.45rem;font-weight:900;color:var(--nv);display:flex;align-items:center;gap:9px}.logo-i{width:34px;height:34px;background:linear-gradient(135deg,var(--nv),var(--nl));border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.85rem;font-weight:700;font-family:var(--fd)}
-.lb{display:flex;gap:3px;flex-wrap:wrap}.lb a{padding:4px 9px;border-radius:var(--rx);font-size:.68rem;font-weight:600;color:var(--t3);border:1px solid var(--bd);transition:.15s;white-space:nowrap}.lb a:hover{color:var(--t2);background:var(--hov)}.lb a.ac{color:var(--nv);background:var(--nf);border-color:var(--nm)}
-.w{max-width:1140px;margin:0 auto;padding:0 24px}.bc{padding:14px 0 4px;font-size:.8rem;color:var(--t3)}.bc a{color:var(--nm)}
-h1{font-family:var(--fd);font-size:2rem;font-weight:900;color:var(--nv);line-height:1.15;margin:10px 0 6px}h1 em{font-style:normal;color:var(--em)}.desc{color:var(--t2);font-size:.92rem;margin-bottom:22px}
-.card{background:var(--card);border-radius:var(--r);box-shadow:var(--sh);padding:28px;border:1px solid var(--bd);margin-bottom:24px}
-.fg{display:grid;grid-template-columns:1fr 1fr;gap:14px}.fi{display:flex;flex-direction:column;gap:4px}
-.fi label{font-size:.74rem;color:var(--t2);font-weight:600}.fi input,.fi select{padding:10px 12px;border-radius:var(--rx);border:1px solid var(--bd);background:var(--ibg);color:var(--tx);font-size:.88rem;font-family:var(--f);outline:none;transition:.15s}
-.fi input:focus,.fi select:focus{border-color:var(--nm);box-shadow:0 0 0 3px rgba(26,39,68,.07);background:#fff}.fi input::placeholder{color:var(--t4)}
-.fi select{cursor:pointer;-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238a8aaa' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:30px}
-.br{display:flex;gap:9px;margin-top:18px}.btn{padding:10px 22px;border:none;border-radius:var(--rx);font-size:.84rem;font-weight:700;cursor:pointer;transition:.15s;font-family:var(--f)}
-.bp{background:var(--nv);color:#fff}.bp:hover{background:var(--nl)}.bs{background:var(--ibg);color:var(--t2)}.bs:hover{background:var(--hov)}
-.rb{margin-top:22px;padding:24px;border-radius:var(--rs);background:linear-gradient(135deg,rgba(26,39,68,.025),rgba(13,124,95,.025));border:1px solid rgba(26,39,68,.07);animation:fu .3s ease both}
-.rb h3{font-size:.72rem;color:var(--nm);text-transform:uppercase;letter-spacing:1.4px;font-weight:700;margin-bottom:8px}.rb .rm{font-family:var(--fd);font-size:2rem;font-weight:900;color:var(--nv);margin-bottom:4px}.rb .rs{font-size:.78rem;color:var(--em);font-weight:600;margin-bottom:12px}
-.ri{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--bd);font-size:.8rem}.ri:last-child{border-bottom:none}.ri .rl{color:var(--t3)}.ri .rv{font-weight:600;text-align:right}
-.ri.hl{background:var(--ef);margin:2px -10px;padding:8px 10px;border-radius:var(--rx);border-bottom:none}.ri.hl .rv{color:var(--em)}
-.rt{width:100%;border-collapse:collapse;margin-top:12px;font-size:.76rem}.rt th{text-align:left;padding:8px;color:var(--t3);font-weight:600;font-size:.66rem;text-transform:uppercase;border-bottom:2px solid var(--bd)}.rt td{padding:7px 8px;border-bottom:1px solid var(--bd);color:var(--t2)}.rt tr:hover td{background:var(--nf)}
-.cc{background:linear-gradient(135deg,var(--nv),var(--nl));color:#fff;border-radius:var(--r);padding:24px;margin-bottom:24px}.cc h3{font-family:var(--fd);font-size:1rem;margin-bottom:10px}
-.cc .fi label{color:rgba(255,255,255,.6)}.cc .fi input,.cc .fi select{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.14);color:#fff}.cc .fi input::placeholder{color:rgba(255,255,255,.3)}
-.cc .fi input:focus,.cc .fi select:focus{border-color:rgba(255,255,255,.35);background:rgba(255,255,255,.17)}
-.cc .fi select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='rgba(255,255,255,0.5)' d='M2 4l4 4 4-4'/%3E%3C/svg%3E")}
-.cc .bp{background:#fff;color:var(--nv)}.cc .rb{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.1)}.cc .rb h3{color:rgba(255,255,255,.5)}.cc .rb .rm{color:#fff}.cc .ri .rl{color:rgba(255,255,255,.4)}.cc .ri .rv{color:#fff}.cc .ri{border-color:rgba(255,255,255,.07)}
-.seo{background:var(--card);border-radius:var(--r);box-shadow:var(--ss);padding:28px;border:1px solid var(--bd);margin-bottom:24px}.seo h2{font-family:var(--fd);font-size:1.15rem;font-weight:700;color:var(--nv);margin-bottom:10px}.seo h3{font-size:.88rem;font-weight:600;margin:14px 0 6px;color:var(--nl)}.seo p{color:var(--t2);font-size:.82rem;margin-bottom:8px;line-height:1.8}.seo strong{color:var(--tx)}
-.fqi{background:var(--card);border-radius:var(--rs);box-shadow:var(--ss);margin-bottom:6px;border:1px solid var(--bd);overflow:hidden}
-.fqq{padding:12px 14px;cursor:pointer;font-size:.82rem;font-weight:600;display:flex;justify-content:space-between;align-items:center;transition:.15s}.fqq:hover{background:var(--nf)}
-.fqa{max-height:0;overflow:hidden;transition:.3s;font-size:.8rem;color:var(--t2);line-height:1.75;padding:0 14px}.fqa.open{max-height:400px;padding:0 14px 12px}
-.il{margin:18px 0;display:flex;flex-wrap:wrap;gap:5px}.il a{padding:5px 12px;background:var(--ibg);border-radius:30px;font-size:.74rem;font-weight:600;color:var(--t2);transition:.15s;border:1px solid var(--bd)}.il a:hover{background:var(--nf);border-color:var(--nm);color:var(--nv)}
-.ad-zone{display:none;background:var(--card);border:1px dashed var(--bd);border-radius:var(--rs);padding:18px;margin:20px 0;text-align:center;min-height:90px;align-items:center;justify-content:center}.ad-zone.active{display:flex}
-.ad-affil{display:none;background:linear-gradient(135deg,rgba(26,39,68,.03),rgba(13,124,95,.02));border:1px solid var(--bd);border-radius:var(--rs);padding:20px;margin:20px 0}.ad-affil.active{display:block}
-.ad-affil-header{font-size:.6rem;color:var(--t4);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px;font-weight:600}
-.ad-affil-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
-.ad-affil-item{background:var(--card);border:1px solid var(--bd);border-radius:var(--rx);padding:14px;transition:.15s;display:block}.ad-affil-item:hover{box-shadow:var(--sh);transform:translateY(-1px)}
-.ad-affil-item .afi-name{font-weight:700;font-size:.84rem;color:var(--nv);margin-bottom:2px}.ad-affil-item .afi-desc{font-size:.72rem;color:var(--t3);margin-bottom:6px}.ad-affil-item .afi-cta{font-size:.7rem;font-weight:700;color:var(--em)}
-.content-with-sidebar{display:grid;grid-template-columns:1fr;gap:24px;align-items:start}.content-with-sidebar.ads-on{grid-template-columns:1fr 280px}
-.content-sidebar{display:none;position:sticky;top:80px}.content-with-sidebar.ads-on .content-sidebar{display:block}
-footer{background:var(--nv);color:rgba(255,255,255,.55);padding:28px 24px;text-align:center;font-size:.74rem;margin-top:28px}footer a{color:rgba(255,255,255,.75);margin:0 4px}
-.fl{font-family:var(--fd);font-size:1rem;font-weight:900;color:#fff;margin-bottom:5px}
-.hero{padding:40px 0 24px;text-align:center}.hero h1{font-size:2.2rem}.hero p{color:var(--t2);font-size:1rem;max-width:540px;margin:0 auto 16px}
-.bg{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;margin-bottom:16px}.badge{display:inline-flex;align-items:center;gap:4px;padding:4px 12px;border-radius:40px;background:var(--nf);color:var(--nv);font-size:.72rem;font-weight:600}.badge.g{background:var(--ef);color:var(--em)}
-.cg{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;margin:16px 0}
-.ci{background:var(--card);border:1px solid var(--bd);border-radius:var(--rs);padding:16px;display:flex;align-items:center;gap:10px;transition:.15s;box-shadow:var(--ss)}.ci:hover{box-shadow:var(--sh);transform:translateY(-1px);border-color:var(--nm)}.ci h3{font-size:.84rem;font-weight:600;margin-bottom:1px}.ci p{font-size:.68rem;color:var(--t3)}
-@keyframes fu{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:700px){.fg{grid-template-columns:1fr}.hero h1{font-size:1.6rem}h1{font-size:1.5rem}.card{padding:18px 14px}.hi{padding:10px 12px}.content-with-sidebar,.content-with-sidebar.ads-on{grid-template-columns:1fr}.content-sidebar{position:static}}
-/* Cookie Banner */
-#ck-banner{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:var(--card);border-top:1px solid var(--bd);box-shadow:0 -4px 20px rgba(0,0,0,.08);padding:0;animation:ckSlide .3s ease}
-@keyframes ckSlide{from{transform:translateY(100%)}to{transform:translateY(0)}}
-.ck-inner{max-width:1140px;margin:0 auto;padding:18px 24px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
-.ck-text{flex:1;min-width:280px}.ck-text strong{font-size:.88rem;color:var(--nv);display:block;margin-bottom:4px}.ck-text p{font-size:.78rem;color:var(--t2);line-height:1.6;margin:0}
-.ck-btns{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.ck-btn{padding:9px 20px;border:none;border-radius:var(--rx);font-size:.8rem;font-weight:700;cursor:pointer;font-family:var(--f);transition:.15s}
-.ck-accept{background:var(--em);color:#fff}.ck-accept:hover{background:var(--el)}
-.ck-reject{background:var(--ibg);color:var(--t2)}.ck-reject:hover{background:var(--hov)}
-.ck-link{font-size:.72rem;color:var(--nm);text-decoration:underline}
-@media(max-width:600px){.ck-inner{flex-direction:column;text-align:center}.ck-btns{justify-content:center}}</style><!-- Google Consent Mode v2 — default denied until user accepts -->
-<script>
-window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',wait_for_update:500});
-gtag('js',new Date());gtag('config','G-GR0YJEHWPB');
-</script>
-<script>var CKT={"title":"Cookies & vie privée","text":"Ce site utilise Google Analytics pour mesurer l'audience. Aucune donnée personnelle de calcul n'est collectée. Vos simulations restent sur votre appareil.","accept":"Accepter","reject":"Refuser","policy":"Politique de confidentialité","policyLink":"privacy.html"};</script>
-<script>
-(function(){
-var CK='immo_consent';
-function getC(){try{return JSON.parse(localStorage.getItem(CK))}catch(e){return null}}
-function setC(v){localStorage.setItem(CK,JSON.stringify({v:v,t:Date.now()}))}
-function applyConsent(v){
-  if(v==='all'){
-    gtag('consent','update',{analytics_storage:'granted',ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted'});
-    if(!document.querySelector('script[src*="googletagmanager"]')){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-GR0YJEHWPB';document.head.appendChild(s);}
-  }
-}
-function showBanner(){
-  if(document.getElementById('ck-banner'))return;
-  var d=document.createElement('div');d.id='ck-banner';
-  d.innerHTML='<div class="ck-inner"><div class="ck-text"><strong>🍪 '+CKT.title+'</strong><p>'+CKT.text+'</p></div><div class="ck-btns"><button class="ck-btn ck-accept" onclick="ckAccept()">'+CKT.accept+'</button><button class="ck-btn ck-reject" onclick="ckReject()">'+CKT.reject+'</button><a href="'+CKT.policyLink+'" class="ck-link">'+CKT.policy+'</a></div></div>';
-  document.body.appendChild(d);
-}
-window.ckAccept=function(){setC('all');applyConsent('all');var b=document.getElementById('ck-banner');if(b)b.remove();};
-window.ckReject=function(){setC('none');var b=document.getElementById('ck-banner');if(b)b.remove();};
-window.ckReset=function(){localStorage.removeItem(CK);location.reload();};
-var existing=getC();
-if(existing){applyConsent(existing.v);}
-else{document.addEventListener('DOMContentLoaded',showBanner);}
-})();
-</script></head><body>
-<header><div class="hi"><a href="index.html" class="logo"><div class="logo-i">IC</div> ImmoCalc</a><div class="lb"><a href="index.html" class="ac">🇫🇷</a><a href="en/index.html">🇬🇧</a><a href="de/index.html">🇩🇪</a><a href="es/index.html">🇪🇸</a><a href="pt/index.html">🇵🇹</a><a href="it/index.html">🇮🇹</a><a href="nl/index.html">🇳🇱</a><a href="fr-be/index.html">🇧🇪</a><a href="nl-be/index.html">🇧🇪</a><a href="fr-ch/index.html">🇨🇭</a><a href="us/index.html">🇺🇸</a><a href="lb/index.html">🇱🇺</a><a href="da/index.html">🇩🇰</a><a href="uae/index.html">🇦🇪</a></div></div></header>
-<div class="w"><section class="hero"><h1>Simulateurs <em>Immobiliers</em> Internationaux</h1><p>Prêt, frais, rentabilité, fiscalité — adaptés à chaque pays. Résultats instantanés.</p>
-<div class="bg"><span class="badge">🏠 8 simulateurs</span><span class="badge g">🌍 14 versions</span><span class="badge">🔒 Privé & gratuit</span></div></section>
-<div class="ad-zone" id="ad-top"><div><!-- AdSense 728x90 --></div></div>
-<div class="cg"><a class="ci" href="pret-immobilier.html"><div><h3>Simulateur de Prêt Immobilier</h3><p>Mensualités avec assurance ADI incluse, coût total et TAEG.</p></div></a>
-<a class="ci" href="frais-de-notaire.html"><div><h3>Calculateur de Frais de Notaire</h3><p>Ancien (~7,5%) vs Neuf (~2,5%). Droits de mutation + émoluments + frais divers.</p></div></a>
-<a class="ci" href="capacite-emprunt.html"><div><h3>Capacité d'Emprunt</h3><p>Calcul selon la règle des 35% du HCSF.</p></div></a>
-<a class="ci" href="rentabilite-locative.html"><div><h3>Rentabilité Locative</h3><p>Rendement brut, net de charges, cash-flow mensuel.</p></div></a>
-<a class="ci" href="plus-value-immobiliere.html"><div><h3>Plus-Value Immobilière</h3><p>19% IR + 17,2% prélèvements sociaux. Abattements progressifs.</p></div></a>
-<a class="ci" href="pret-international.html"><div><h3>Comparateur de Prêt International</h3><p>Comparez taux, mensualités et frais entre 2 pays.</p></div></a>
-<a class="ci" href="tableau-amortissement.html"><div><h3>Tableau d'Amortissement</h3><p>Détail annuel du remboursement.</p></div></a>
-<a class="ci" href="taux-endettement.html"><div><h3>Taux d'Endettement</h3><p>Seuil des 35% des revenus nets (HCSF).</p></div></a></div>
-<div class="ad-affil" id="affil-home"><div class="ad-affil-header">Partners</div><div class="ad-affil-grid">
-<a href="#" class="ad-affil-item" rel="sponsored nofollow"><div class="afi-name"><!-- Partner 1 --></div><div class="afi-desc"><!-- Desc --></div><div class="afi-cta">→</div></a>
-<a href="#" class="ad-affil-item" rel="sponsored nofollow"><div class="afi-name"><!-- Partner 2 --></div><div class="afi-desc"><!-- Desc --></div><div class="afi-cta">→</div></a>
-</div></div></div>
-<footer><div class="fl">ImmoCalc</div><p>© 2026 ImmoCalc — Simulateurs immobiliers gratuits. Calculs dans votre navigateur.</p><p style="margin-top:6px"><a href="privacy.html">Confidentialité</a> · <a href="legal.html">Mentions légales</a> · <a href="javascript:ckReset()">Gérer les cookies</a></p></footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Property Calc | Coming Soon</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            max-width: 500px;
+        }
+        h1 { color: #2c3e50; margin-bottom: 0.5rem; }
+        p { color: #7f8c8d; font-size: 1.1rem; line-height: 1.6; }
+        .logo { font-size: 3rem; margin-bottom: 1rem; }
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 2s linear infinite;
+            margin: 2rem auto;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🏠📊</div>
+        <h1>Smart Property Calc</h1>
+        <p>We are currently fine-tuning our financial tools to provide you with the most accurate property insights.</p>
+        <div class="loader"></div>
+        <p><strong>Launch scheduled for tomorrow!</strong></p>
+    </div>
+</body>
+</html>
